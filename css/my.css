@@ -1,0 +1,591 @@
+
+*{margin: 0;padding: 0}
+html,body{height:100%}
+ul li:hover{
+    cursor: pointer;
+}
+body{background: url("../img/bodybg.png") repeat}
+
+nav{width: 100%;
+    background: rgba(255,255,255,.98);
+    height: 60px;
+
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    top:-60px;
+    transition:.5s ease-in-out;
+}
+nav:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.nav-left{
+    margin-left: 100px;
+    width: 200px;
+}
+.nav-left h2{
+    float:left;
+    font: bold 24px/45px 微软雅黑;
+    height: 45px;
+    margin-top: 7px
+}
+.nav-left h2:before{
+    content: url("../img/icons-h2-sm.png") ;
+    vertical-align: middle;
+}
+.nav-right{
+    width: calc(100% - 400px);
+    float: right;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-right: 100px;
+}
+
+.nav-right li{
+    width: 30px;
+    height: 30px;
+    margin: 10px 8px 20px;
+    float: right
+}
+.li-facebook{
+    background: url("../img/social.png") no-repeat -210px 0;
+}
+.li-facebook:hover{
+    background: url("../img/social.png") no-repeat -210px -30px;
+}
+.li2-fly{
+    background: url("../img/social.png") no-repeat -90px 0;
+}
+.li2-fly:hover{
+    background: url("../img/social.png") no-repeat -90px -30px;
+}
+.li3-youtobe{
+    background: url("../img/social.png") no-repeat -30px 0;
+}
+.li3-youtobe:hover{
+    background: url("../img/social.png") no-repeat -30px -30px;
+}
+.li4-g{
+    background: url("../img/social.png") no-repeat -180px 0;
+}
+.li4-g:hover{
+    background: url("../img/social.png") no-repeat -180px -30px;
+}
+.li5-ball{
+    background: url("../img/social.png") no-repeat -150px 0;
+}
+.li5-ball:hover{
+    background: url("../img/social.png") no-repeat -150px -30px;
+}
+@media screen and (max-width:648px) {
+    .nav-right{
+        width: calc(100% - 15px);
+        margin-right:0;
+        margin-left: 15px;
+    }
+    .nav-right li{
+        float: left;
+    }
+}
+.content{width: 50%;margin: 0 auto;margin-top: 60px;background: #ffffff;height:auto;}
+@media screen and (max-width:1025px) {
+    .content{
+        width: 98%;
+    }
+}
+.myshow,.myskill,.myhobby,.Experience,.contact{width: 100%;height:auto;position: relative;margin-top:30px }
+
+.myshow:before{
+    /*前面加伪元素 导致了div页面里被向下撑 可以开绝对解决 这里为了自适应用的相对没有解决这个问题*/
+    display: block;
+    content:'';
+    width: 45px;
+    height: 45px;
+    background-image: url("../img/icons.png");
+    background-position: -90px -45px;
+    position:absolute;
+    left: -60px;
+    top: 25px;
+    clear: both;
+}
+.myshow{padding-top: 30px;
+    box-sizing: border-box;
+}
+.title-show:before{
+    content: url('../img/black.png');
+
+}
+.title-show span{
+    margin-left: 10px;
+    font: bold 24px 'verdana',sans-serif;
+
+
+}
+.first-right{
+    margin-top: -15px;
+    margin-right: 50px;
+    width: calc(100% - 350px);
+}
+@media screen and (max-width: 1212px){
+    .first-right{
+
+       
+    width: 100%;
+    
+    margin-right: 0;
+    padding-left: 60px;
+
+    }
+    .first-right li{
+        float: left;
+    }
+}
+.show-content{
+    width: 70%;
+ /*   height: 230px;*/
+    margin: 0 auto;
+    background: #fbfbfb;
+    margin-top: 50px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 0px gray;
+    padding: 2px;
+
+
+}
+.show-content p{
+    padding: 5px;
+    font:13px 微软雅黑;
+    line-height:1.3em;
+    letter-spacing:2px;
+
+}
+.name:before{
+    content: url("../img/name.png");
+
+    display: inline-block;
+    margin-right: 2px;
+}
+.major:before{
+    content: url("../img/major.png");
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 2px;
+}
+.address:before{
+    content: url("../img/address.png");
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 2px;
+}
+.like:before{
+    content: url("../img/like.png");
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 2px;
+}
+.state:before{
+    content: url("../img/like.png");
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.phone:before{
+    content: url("../img/phone.png");
+   vertical-align: middle;
+    display: inline-block;
+    margin-right: 2px;
+}
+@media screen and (max-width: 705px){
+    .show-content {
+        width:calc(100% - 10px);
+        margin: 0 auto;
+
+    }
+    .show-content p ,.show-content p span{
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+.myskill:before{
+    display: block;
+    content:'';
+    width: 45px;
+    height: 45px;
+    background-image: url("../img/icons.png");
+
+    position:absolute;
+    left: -60px;
+    top: -5px;
+    clear: both;
+}
+#ulskill{
+    list-style: none;
+    margin-left: 70px;
+    width: calc(100% - 70px);
+    margin-top: 20px;
+    display: block;
+    transition: 1s  ease-in;
+    opacity: 0;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+#ulskill li{
+    width:0;
+    height: 20px
+}
+#ulskill li{
+    width:0;
+    margin: 5px 0;
+    color:white;
+    text-align: right;
+    font-weight: bold;
+    font-family:"微软雅黑";
+    line-height: 20px
+}
+
+#ulskill label{
+    color:#afc8ba ;
+    font-size: 18px;
+    font-weight: bold}
+#ulskill li:nth-of-type(1){
+    background:repeating-linear-gradient(45deg,red 0,darkorange 10px);
+    background-size: 10000px 15px;
+    animation-name: htmlanim;
+    animation-duration: 160s;
+    animation-iteration-count:1;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+    transition: 1s ease-in;
+}
+#ulskill li:nth-of-type(2){
+    background:repeating-linear-gradient(45deg,#eea5d1 0,#a22076 10px);
+    background-size: 10000px 15px;
+
+    transition: 1s ease-in;
+    animation-name: cssanim;
+    animation-duration:160s;
+    animation-iteration-count:1;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+}
+
+#ulskill li:nth-of-type(3){
+    background:repeating-linear-gradient(45deg,#2ec3e7 0,#5d828a 10px);
+    background-size: 10000px 15px;
+    animation-name: jsanim;
+    animation-duration: 160s;
+    animation-iteration-count: 1;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+    transition: 1s ease-in;
+}
+
+#ulskill li:nth-of-type(4){
+    background:repeating-linear-gradient(45deg,#e9db39 0,white 10px);
+    background-size: 10000px 15px;
+    animation-name: gameanim;
+    animation-duration:160s;
+    animation-iteration-count: 1;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+    transition: 1s ease-in;
+}
+
+#ulskill li:nth-of-type(5){
+    background:repeating-linear-gradient(45deg,#276893 0,#e3efd1 10px);
+    background-size: 10000px 15px;
+    animation-name: othanim;
+    animation-duration:160s;
+    animation-iteration-count: 1;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+    transition: 1s ease-in;
+
+}
+
+@keyframes htmlanim{
+    from{background-position: 0 0}
+    to{background-position: 5000px 0}
+}
+@keyframes cssanim{
+    from{background-position: 0 0}
+    to{background-position: 5000px 0}
+}
+@keyframes jsanim{
+    from{background-position: 0 0}
+    to{background-position: 5000px 0}
+}
+@keyframes gameanim{
+    from{background-position: 0 0}
+    to{background-position: 5000px 0}
+}
+@keyframes othanim{
+    from{background-position: 0 0}
+
+    to{background-position: 5000px 0}
+}
+@media screen and (max-width: 700px){
+    #ulskill{width: calc(100% - 20px);margin-left: 20px}
+}
+.myhobby:before{
+    display: block;
+    content:'';
+    width: 45px;
+    height: 45px;
+    background-image: url("img/icons.png");
+    background-position:0 -45px ;
+    position:absolute;
+    left: -60px;
+    top: -5px;
+    clear: both;
+}
+.hobby-detail{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
+    margin-left: 50px;
+}
+.title,.detail{
+    width: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 2px;
+}
+.trip-title,.game-title{
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.2em;
+    color: #323232;
+}
+.detail{
+    font: 14px 微软雅黑;
+    color:grey;
+}
+.pic-trans{
+	box-sizing:border-box;
+	width:100%;
+    border: 2px solid #f0f0f0;
+    border-radius:5px;
+    margin: 2px;
+    height: 200px;
+
+    position: relative;
+
+
+
+}
+.pic-trans li{
+	position:relative
+}
+.pic-trans:after{
+    display: table;
+    content:'';
+    clear:both;
+}
+
+.pic-trans li img {
+    width: 100%;
+	height:100%;
+    position: absolute;
+}
+#pic1,#pic2,#pic3{
+    height:300px;
+}
+#pic3,#pic2,#pic1{
+
+    animation-name: trans;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+
+    transition: 1s ease-in;
+}
+#pic2{
+    animation-delay: 2s;
+}
+#pic1{
+    animation-delay: 4s;
+
+}
+@keyframes trans {
+    from{opacity: 1}
+    to{opacity: 0}
+}
+.Experience{
+    margin-top: 130px;
+}
+.Experience:before{
+    display: block;
+    content:'';
+    width: 45px;
+    height: 45px;
+    background-image: url("../img/icons.png");
+    background-position: -45px 0;
+    position:absolute;
+    left:-60px;
+    top: -5px;
+    clear: both;
+}
+.ex-txt-detail{
+    text-align: center;
+    width: 100%;
+}
+.ex-img-detail{
+    display: flex;
+    justify-content: space-between;
+	height: 178px;
+}
+.ex-img-detail div{
+    width: 30%;
+    margin: 5px;
+   
+}
+.ex-img-detail div img{
+    width: 100%;
+	transition: .5s ease-in;
+	 opacity: 0.6;
+}
+.htmlpic img:hover{
+    cursor: pointer;
+    opacity: 1;
+    border: 2px solid whitesmoke;
+    transform: scale(1.2)  translateZ(100px);
+    box-shadow: 0 05px 5px whitesmoke;
+}
+.csspic img:hover{
+    cursor: pointer;
+    opacity: 1;
+    border: 2px solid whitesmoke;
+    transform: scale(1.5)  translateZ(100px);
+    box-shadow: 0 0 5px 5px whitesmoke;
+}
+.jspic img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    border: 2px solid whitesmoke;
+    transform: scale(1.5)  translateZ(100px);
+    box-shadow: 0 0 5px 5px whitesmoke;
+}
+.sm-title-show{
+    margin: 10px 0;
+    margin-left:52px ;
+}
+.sm-title-show:before{
+    content:''
+}
+.contact:before{
+    display: block;
+    content:'';
+    width: 45px;
+    height: 45px;
+    background-image: url("../img/icons.png");
+    background-position: -135px -45px;
+    position:absolute;
+    left:-60px;
+    top: -5px;
+    clear: both;
+}
+.contact-detail{
+    margin-top:5px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    background: #fff;
+    padding-left: 70px;
+    padding-bottom: 20px;
+}
+.contact-detail:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.contact-detail li{
+    float: left;
+    margin: 5px;
+}
+.qq,.weChat,.sina{
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.q-content,.w-content,.s-content{
+    display: none;
+    position: absolute;
+    top:45px;
+    color: red;
+}
+.qq{
+    background-image: url("../img/qq.png");
+    background-size:74%;
+}
+
+.qq:hover{
+    background-image: url("../img/qqcolor.png");
+    background-size: 90%;
+}
+.qq:hover .q-content{
+    display: block;
+}
+.weChat{
+    //background-image: url("../img/weChat.png");
+
+    //background-position: 0 5px;
+}
+.jtico_weixin{
+    transform: scale(1.1);
+    background:url(../img/weChat.png)  no-repeat  center!important;
+    background-size:100% 100% !important;
+}
+.weChat:hover .jtico_weixin{
+    background:url(../img/weChatcolor.png)  no-repeat  center!important;
+    background-size:100% 100% !important;
+}
+.weChat:hover .w-content{
+    display: block;
+}
+.sina{
+   // background-image: url("../img/sina.png") ;
+    //background-position: 0 5px;
+}
+
+.jtico_tsina{
+	transform: scale(1.1);
+	height:40px;!important;
+	background:url(../img/sina.png)  no-repeat  center!important;
+    background-size:100% 100% !important;
+}
+.sina:hover .jtico_tsina{
+    background:url(../img/sinacolor.png)  no-repeat  center !important;
+
+    background-position: 0 0px;
+}
+.sina:hover .s-content{
+    display: block;
+}
+footer{
+    width: 100%;height: 50px;
+}
+@media screen and (max-width: 766px) {
+    .nav-left{
+        width: 100%;
+        box-sizing: border-box;
+        margin-left: 26%;
+    }
+    .last-none{
+        display: none;
+    }
+}
